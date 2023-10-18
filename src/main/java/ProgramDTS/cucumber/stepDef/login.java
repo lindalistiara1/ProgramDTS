@@ -29,7 +29,7 @@ public class login {
 
     @When("user input username yang valid")
     public void userInputUsernameYangValid() {
-        driver.findElement(By.id("Username")).sendKeys("standard_user");
+        driver.findElement(By.id("Username")).sendKeys("standard_userghgkhgkhk");
     }
 
     @And("user input password yang valid")
@@ -45,4 +45,24 @@ public class login {
     public void userDapatLoginKeAplikasi() {
         driver.findElement(By.xpath("//div[@class='app_logo']\""));
     }
+
+
+        @When("user input username yang valid")
+        public void userInputUsernameYangValid() {
+            driver.findElement(By.id("Username")).sendKeys("standard_user");
+        }
+
+        @And("user input password yang valid")
+        public void userInputPasswordYangValid() {
+            driver.findElement(By.id("Password")).sendKeys("secret_sauce");
+        }
+        @And("klik tombol login")
+        public void klikTombolLogin() {
+            driver.findElement(By.xpath("//*[@id='login-button']")).click();
+        }
+
+        @Then("user dapat login ke aplikasi")
+        public void userDapatLoginKeAplikasi() {
+            driver.findElement(By.xpath("//div[@class='app_logo']\""));
+        }
 }
