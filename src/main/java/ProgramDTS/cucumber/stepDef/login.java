@@ -25,13 +25,10 @@ public class login {
 
         //Assertion
         String loginPageAssert = driver.findElement(By.xpath("//h2(contains(text(),'Swag')]")).getText();
-
-
     @When("user input username yang valid")
     public void userInputUsernameYangValid() {
-        driver.findElement(By.id("Username")).sendKeys("standard_userghgkhgkhk");
+        driver.findElement(By.id("Username")).sendKeys("standard_user");
     }
-
     @And("user input password yang valid")
     public void userInputPasswordYangValid() {
         driver.findElement(By.id("Password")).sendKeys("secret_sauce");
@@ -40,18 +37,14 @@ public class login {
     public void klikTombolLogin() {
         driver.findElement(By.xpath("//*[@id='login-button']")).click();
     }
-
     @Then("user dapat login ke aplikasi")
     public void userDapatLoginKeAplikasi() {
         driver.findElement(By.xpath("//div[@class='app_logo']\""));
     }
-
-
         @When("user input username yang valid")
         public void userInputUsernameYangValid() {
-            driver.findElement(By.id("Username")).sendKeys("standard_user");
+            driver.findElement(By.id("Username")).sendKeys("standard_userhhiyiyi");
         }
-
         @And("user input password yang valid")
         public void userInputPasswordYangValid() {
             driver.findElement(By.id("Password")).sendKeys("secret_sauce");
@@ -60,7 +53,6 @@ public class login {
         public void klikTombolLogin() {
             driver.findElement(By.xpath("//*[@id='login-button']")).click();
         }
-
         @Then("user dapat login ke aplikasi")
         public void userDapatLoginKeAplikasi() {
             driver.findElement(By.xpath("//div[@class='app_logo']\""));

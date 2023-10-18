@@ -18,8 +18,6 @@ public class checkout {
 
     @FindBy(xpath = "//span[@class='title']")
     public FluentWebElement spanCheckoutYourInformation;
-
-
     @Given("Halaman login saucedemo")
     public void Halaman_login_saucedemo(){
         WebDriverManager.chromedriver().setup();
@@ -32,12 +30,9 @@ public class checkout {
         @Given("user berada di halaman keranjang")
         public void userBeradaDiHalamanKeranjang() {
             driver.findElement(By.xpath("\"//span[@class='Your Cart']\"));
-
         }
-
         @When("user klik tombol checkout")
         public void userKlikTombolCheckout() {
-
             driver.findElement(By.xpath("//*[@id='checkout']")).click();
         }
         @Then("user dapat melihat halaman checkout information")
